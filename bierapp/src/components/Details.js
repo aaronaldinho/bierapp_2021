@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import BeerApi from './BeerApi.js'
+import {withRouter} from 'react-router'
 
-import {
+import { useParams,
     Link
   } from "react-router-dom";
 import getRandomBeers from './getRandomBeers.js'
 
 const Details = (props) => {
 
-    const API_BASE = 'https://ih-beers-api2.herokuapp.com/beers/';
+    const API_BASE = 'https://ih-beers-api2.herokuapp.com/beers/' + props.match.params.id;
 
 
     const [details, setDetails] = useState();
+    const {id} = useParams();
 
     useEffect(()=>{
         showMe()
@@ -23,21 +24,21 @@ const Details = (props) => {
         setDetails(getShow)
     }
 
-    //const details = 0;
 
     return (
         <div>
-            <img src={details} alt=""/>
+            <h2>I am detail</h2>
+            <img src={'foto'} alt=""/>
             <div className='div-info-details'>
-                <h3>you are</h3>
+                <h3>{details.name}</h3>
                 <p> <strong>A real ....</strong></p>
                 <figcaption></figcaption>
                 <figcaption></figcaption>
                 <p>A light</p>
-                <Link><button onClick={Details}>Aqui Button back</button></Link>
+                <Link to={'/details/'+props._id}><button onClick={Details}>Aqui Button back</button></Link>
             </div>
         </div>
      );
 }
  
-export default Details;
+export default withRouter (Details);
