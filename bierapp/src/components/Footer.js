@@ -1,5 +1,5 @@
 import Img from '../Img/bier 1 svg final.svg'
-
+import React from 'react'
 const Footer = () => {
     return ( 
         <div className='box-footer'>

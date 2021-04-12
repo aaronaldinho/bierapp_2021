@@ -1,12 +1,12 @@
-import React, { useEffect, useState, Fragment } from 'react';
-// import BeerApi from './BeerApi.js'
-import Home from 'react'
+import React, { useEffect, useState } from 'react';
+import BeerApi from './BeerApi.js'
+
 import {
     Link
   } from "react-router-dom";
-import RandomBeers from './getRandomBeers';
+import getRandomBeers from './getRandomBeers.js'
 
-const Details = () => {
+const Details = (props) => {
 
     const API_BASE = 'https://ih-beers-api2.herokuapp.com/beers/';
 
@@ -26,7 +26,7 @@ const Details = () => {
     //const details = 0;
 
     return (
-        <Fragment>{}
+        <div>
             <img src={details} alt=""/>
             <div className='div-info-details'>
                 <h3>you are</h3>
@@ -36,7 +36,7 @@ const Details = () => {
                 <p>A light</p>
                 <Link><button onClick={Details}>Aqui Button back</button></Link>
             </div>
-        </Fragment>
+        </div>
      );
 }
  

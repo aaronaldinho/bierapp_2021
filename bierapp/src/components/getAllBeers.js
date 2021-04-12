@@ -2,13 +2,13 @@ import {Link} from 'react-router-dom';
 // import {useParams} from 'react-router'
 import React from 'react';
 
-const getAllBeers = (props) => {
+function GetAllBeers (props) {
 
 
 
     // const {id} = useParams();
 
-    console.log(props.useParams)
+    // console.log(props.useParams)
 
     return (  
         <h2>I am the all beers</h2>,
@@ -16,4 +16,4 @@ const getAllBeers = (props) => {
 
     );
 }
-export default getAllBeers;
+export default GetAllBeers;
