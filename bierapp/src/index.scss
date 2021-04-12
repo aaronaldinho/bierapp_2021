@@ -34,6 +34,7 @@ header{
   bottom: 1em;
   width: 100%;
   height: 10vh;
+  margin-top: 1em ;
 }
 
 .div-circle-white{
@@ -161,4 +162,22 @@ header{
   
   // top: 181px;
   // left:185px;
+}
+
+
+//Home
+
+.home-page{
+  width: 100%;
+
+padding: 1em;
+  margin-bottom: 1em;
+  border: deeppink solid 1px;
+}
+
+//figcaption
+figure{
+
+  background: $color-base;
+  height: 3em;
 }
