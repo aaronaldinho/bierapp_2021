@@ -1,6 +1,9 @@
 import {Link} from 'react-router-dom';
 import React from 'react';
 //ESTE ES EL DETALLE DE LA CERVEZA
+
+
+
 const Post = (props) => {
     return ( 
         <div>
